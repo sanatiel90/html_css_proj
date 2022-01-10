@@ -1,0 +1,342 @@
+/***************
+    PLANO
+****************/
+
+.plano {
+    padding: 10px;
+    border: 1px solid #95a4a5;    
+    position: relative;
+
+    font-size: 1.4rem; /*medida REM é relativa ao tamanho padrao da fonte do documento HTML*/
+}
+
+.plano--mais-popular::after {
+    background-color: #c20303;
+    color: #fff;
+    content: "MAIS POPULAR";
+
+    font-size: 0.7142em;
+    line-height: 2.5;
+
+    padding: 0 10px;
+
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+/* media queries: é uma regra q vc define, nesse caso se tem largura minima de 800px, e depois vc
+   coloca os elementos que vao executar o bloco {} caso a regra esteja sendo cumprida */
+/*@media (min-width: 800px) {
+    article {
+        width: 30%;    
+        float: left;
+        margin-right: 5%;
+    }
+}*/
+
+.plano__cabecalho {
+    margin: -10px;
+    margin-bottom: 0;
+
+    background-color: #95a4a5;
+    color: #fff;
+    
+    text-align: center;
+    line-height: 2.5;   
+    font-weight: normal;
+    font-size: 2em; /*medida EM é relativa ao tamanho do elemento pai*/
+}
+
+.plano__preco {
+    text-align: center;
+    font-size: 2em;
+
+    margin: 20px 0;
+}
+
+.plano__caracteristicas {
+    list-style: none;
+
+    font-size: 1em;
+
+    padding: 0;
+    margin: 20px 0;
+}
+
+.plano__caracteristicas > li {
+    text-align: center;
+}
+
+.plano__rodape {
+    text-align: center;
+}
+
+/***************
+    BOTAO
+****************/
+.botao {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1em;
+    
+    background-color: #bbb;
+    color: #fff;    
+
+    line-height: normal;
+    padding: 12px 16px;
+    border-radius: 4px;
+
+    border: none;
+}
+
+.botao:hover, .botao:focus {
+    background-color: #aaa;
+}
+
+.botao--assinar {
+    background-color: #127d00;
+}
+
+.botao--assinar:hover, .botao--assinar:focus {
+    background-color: #0e6400;
+}
+
+.botao--principal {
+    background-color: #004b86;
+}
+
+.botao--principal:hover, .botao--principal:focus {
+    background-color: #003b6a;
+}
+
+.botao--login {
+    background-color: #127d00;
+}
+
+.botao--login:hover, .botao--login:focus {
+    background-color: #0e6400;
+}
+
+/**
+    CHAMADA
+*/
+.chamada {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.chamada__titulo {
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 3.375em;
+
+    line-height: 0.9;
+    text-shadow: 1px 1px #313131;
+}
+
+.chamada__subtitulo {
+    margin: 60px 0;
+
+    color: #fff;
+
+    font-size: 1em;
+}
+
+.chamada__acao {
+    font-size: 1em;
+}
+
+/*quando o elemento tiver pelo menos 992px, aplicar esse estilo nos seletores indicados*/
+@media(min-width: 992px) {
+    .chamada {
+        padding-left: 10%;
+        padding-right: 10%;
+
+        font-size: 2rem;
+    }
+}
+
+/**
+    DEPOIMENTO
+*/
+.depoimento {
+    font-size: 2.2rem;
+   
+}
+
+@media(min-witdh: 992px) {
+    .depoimento {
+        padding-left: 15%;
+        padding-right: 15%;
+
+        font-size: 2.2rem;
+    }
+}
+
+.depoimento > blockquote {
+    margin: 0;
+    padding: 0 60px;
+
+    text-align: center;
+    font-size: 1em;
+
+    position: relative;
+}
+
+.depoimento > blockquote::before {
+    position: absolute;
+    left: 0;
+    top: -0.35em;
+
+    color: #ccc;
+
+    font-size: 8em;
+
+    content: "\201C";
+
+}
+
+.depoimento__autor {
+    margin-top: 40px;
+
+    text-align: center;
+    font-size: 0.7272;
+}
+
+.depoimento__autor > img {
+    border-radius: 50%;
+
+}
+
+.depoimento__autor > p {
+    margin-top: 10px;
+}
+
+/**
+    NAVEGACAO
+*/
+.navegacao {
+    font-size: 1rem;
+}
+
+.navegacao__menu {
+    float: right;
+}
+
+/*
+    BOTAO CHAVEADOR
+*/
+.botao-chaveador {
+    width: 30px;
+    height: 30px;
+        
+    background: none;
+    
+    background-image: url("../imagens/bar.png");
+
+    outline: none;
+}
+
+@media(min-width: 992px){
+    .botao-chaveador {
+        display: none;
+    }
+
+}
+
+/*
+    MENU
+*/
+
+.menu {        
+    margin: 0;    
+
+    font-size: 1.4rem;
+
+    list-style: none;
+}
+
+@media(max-width: 991px){
+    .menu {        
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding: 20px;
+
+        display: none;
+        
+        border-right: 1px solid #eee;
+    
+        width: 200px;
+        background-color: #fbfbfb ;            
+    }
+
+    .menu--exibindo {
+        display: block;
+    }
+
+    .menu__item {
+        display: block;
+        line-height: 3;
+    }
+
+    .menu__item--botao {
+        margin-top: 20px;
+    }
+    
+}
+
+@media(min-width: 992px){
+    .menu__item {
+        display: inline-block;
+        padding-right: 20px;
+    }
+
+    /*seleciona o ultimo elemento q tem a classe menu__item*/
+    .menu__item:last-of-type {
+        padding-right: 0px;
+    }
+}
+
+.menu__item > a {
+    text-decoration: none;
+}
+
+.titulo-formulario {
+    margin: 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ccc;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #004b86;
+}
+
+/*
+    GRUPO ENTRADA
+*/
+.grupo-entrada {
+    margin-bottom: 15px;
+}
+
+.grupo-entrada > label {
+    display: block;
+
+    font-weight: bold;
+}
+
+
+/*
+    CAMPO
+*/
+.campo {
+    width: 100%;
+}
+
+.botao-grupo {
+    text-align: center;
+    margin-top: 40px;
+}

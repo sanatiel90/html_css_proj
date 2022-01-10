@@ -1,0 +1,87 @@
+.layout-cabecalho {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ccc;
+
+    background-color: #fff;
+}
+
+.layout-cabecalho--home {
+    /*para o elemento ficar fixo na pagina, nao se mexer ao rolar o scroll, por exemplo; a position fixed
+      habilita outras props, como top, bottom, right e left, para definir uma posicao para o elemento em 
+      pixels*/
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;    /*prop pra definir q esse elemento vai ficar na frente dos outros com z-index menores 
+                      (o padrao de todos é 0) */   
+}
+
+/*
+POSITION static: é o padrao de todos os elementos, tem z-index: 0;
+
+POSITION fixed: fixa o elemento numa determinada coordenadada (usando props TOP, LEFT, RIGHT, BOTTOM), para
+que nao se mova quando houver scroll por exemplo. 
+
+POSITION relative: faz com que o elemento se mova (usando props TOP, LEFT, RIGHT, BOTTOM) com base na
+posicao que ele deveria estar caso estivesse na posicao padrao static. A posicao original do elemento é
+inclusive conservada e ocupa espaço msm o elemento relative nao estando lá.
+
+POSITION absolute: faz com que o elemento se mova (usando props TOP, LEFT, RIGHT, BOTTOM) para onde vc
+apontar as coordenadas, com base no primeiro elemento pai que possuir uma POSITION RELATIVE ou 
+POSITION ABSOLTE, se nao houver nenhum elemento pai com POS relative/absolute, se move com base 
+na viewport do documento
+
+nas positions fixed, relative e absolute, pode-se usar a prop z-idnex para definir q esse elemento 
+vai ficar na frente dos outros com z-index menores (o padrao de todos é 0)
+*/
+
+.layout-cabecalho img {
+    margin-top: 12px;
+}
+
+
+/*.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+}*/
+
+.layout-planos {
+    padding: 80px 0;
+}
+
+.layout-chamada {
+    padding: 80px 0;
+    margin-top: 60px;
+    background-color: #7ab55c;
+}
+
+.layout-depoimento {
+    padding: 80px 0;
+
+    background-color: #e7e7e7;
+}
+
+.layout-rodape {
+    padding: 40px 0;
+
+    background-color: #484848;
+
+    color: #fff;
+    text-align: center;
+}
+
+@media(max-width: 749px) {
+    .layout-planos > .container > .row > div:not(.ultima_coluna) {
+        margin-bottom: 40px;
+    }
+}
+
+
+.layout-assinatura {
+    padding: 40px 0;
+}
